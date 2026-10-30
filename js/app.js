@@ -209,7 +209,7 @@
     }
 
     if (raw === null) {
-      state.conversations = seedConversations();
+      state.conversations = [];
       persist();
       return;
     }
@@ -218,7 +218,7 @@
       const parsed = JSON.parse(raw);
       state.conversations = Array.isArray(parsed) ? parsed : [];
     } catch (error) {
-      state.conversations = seedConversations();
+      state.conversations = [];
       persist();
       return;
     }
