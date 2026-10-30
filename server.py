@@ -14,9 +14,8 @@ import urllib.request
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 NVIDIA_ENDPOINT = "https://integrate.api.nvidia.com/v1/chat/completions"
-# Replace this with your real key when you rotate it.
-# Or run:  NVIDIA_API_KEY="your-real-key" python3 server.py 8000
-DEFAULT_NVIDIA_API_KEY = "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"
+# Set your key via environment variable: NVIDIA_API_KEY="your-key" python3 server.py 8000
+# No default key - must be provided via env var for security
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -44,7 +43,13 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_error(400, "Bad request body")
             return
 
-        api_key = os.environ.get("NVIDIA_API_KEY") or DEFAULT_NVIDIA_API_KEY
+        api_key = os.environ.get("NVIDIA_API_KEY")
+        if not api_key:
+            self.send_response(500)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(b'{"error": "NVIDIA_API_KEY environment variable not set"}')
+            return
         request = urllib.request.Request(
             NVIDIA_ENDPOINT,
             data=payload,
