@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16171a" />
+  <meta name="description" content="Cortex AI — a calmer, faster place to think out loud. Ask anything, think deeper, build faster." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cortex AI — Think out loud" />
+  <meta property="og:description" content="A calmer, faster place to think out loud. Ask anything, think deeper, build faster." />
+  <title>Cortex AI — Think out loud</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="apple-touch-icon" href="assets/logo.svg" />
+  <script src="js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/animations.css?v=5" />
+</head>
+<body>
+  <!-- icon sprite -->
+  <svg class="sprite" aria-hidden="true" width="0" height="0">
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M9 4v16"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4L12 3z"/><path d="M18.5 16.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17"/><path d="M12 3c2.5 2.4 3.8 5.5 3.8 9S14.5 18.6 12 21c-2.5-2.4-3.8-5.5-3.8-9S9.5 5.4 12 3z"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="M20 11.5l-7.8 7.8a5 5 0 0 1-7-7L13 4.4a3.4 3.4 0 0 1 4.8 4.8l-7.8 7.8a1.8 1.8 0 0 1-2.6-2.6l7.2-7.2"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M9 21h6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2.5" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6L6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.4 10.8l7.2-4.2M8.4 13.2l7.2 4.2"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 5.5A2.5 2.5 0 0 0 12.5 3h-6A3.5 3.5 0 0 0 3 6.5v6A2.5 2.5 0 0 0 5.5 15"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 4v7h-7"/></symbol>
+    <symbol id="i-like" viewBox="0 0 24 24"><path d="M7 10v10H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h3z"/><path d="M7 10l3.6-6.4A2 2 0 0 1 14 5v4h4.6a2 2 0 0 1 2 2.4l-1.2 6A2 2 0 0 1 17.4 19H7"/></symbol>
+    <symbol id="i-dislike" viewBox="0 0 24 24"><path d="M17 14V4h3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-3z"/><path d="M17 14l-3.6 6.4A2 2 0 0 1 10 19v-4H5.4a2 2 0 0 1-2-2.4l1.2-6A2 2 0 0 1 6.6 5H17"/></symbol>
+    <symbol id="i-command" viewBox="0 0 24 24"><path d="M9 9h6v6H9z"/><path d="M9 9H7.5a2.5 2.5 0 1 1 0-5A2.5 2.5 0 0 1 10 6.5V9M15 9h1.5a2.5 2.5 0 1 0 0-5A2.5 2.5 0 0 0 14 6.5V9M9 15H7.5a2.5 2.5 0 1 0 0 5A2.5 2.5 0 0 0 10 17.5V15M15 15h1.5a2.5 2.5 0 1 1 0 5A2.5 2.5 0 0 1 14 17.5V15"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4.5h6V7M6 7l1 13h10l1-13M10 11v5M14 11v5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10L4 20z"/><path d="M13.5 6.5l3 3"/></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="11" rx="5"/><path d="M12 8V5M9 5l-1.5-2M15 5l1.5-2M7 11H3.5M7 15H4M7 19l-3 1.5M17 11h3.5M17 15h3M17 19l3 1.5"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4l6 2 5-2v14l-5 2-6-2-5 2V6l5-2z"/><path d="M9 4v14M15 6v14"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a7.5 7.5 0 0 1-10.9 6.7L4 20l1.3-5.1A7.5 7.5 0 1 1 20 12z"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="M4 8l4 3 4-6 4 6 4-3-2 10H6L4 8z"/><path d="M6 21h12"/></symbol>
+  </svg>
+
+  <div class="app" id="app">
+    <!-- ───────────────────────── sidebar ───────────────────────── -->
+    <aside class="sidebar" id="sidebar" aria-label="Chat history">
+      <div class="sidebar__head">
+        <a class="brand" href="#">
+          <span class="brand__mark" aria-hidden="true"><img class="brand__logo" src="assets/logo.svg" alt=""></span>
+          <span class="brand__name">Cortex<em>AI</em></span>
+          <span class="sr-only"> home</span>
+        </a>
+        <button class="icon-btn icon-btn--sm sidebar__collapse" id="sidebarClose" type="button" aria-label="Close sidebar">
+          <svg class="ic"><use href="#i-panel"/></svg>
+        </button>
+      </div>
+
+      <button class="new-chat" id="newChatBtn" type="button">
+        <svg class="ic"><use href="#i-plus"/></svg>
+        <span>New chat</span>
+        <kbd class="new-chat__kbd">⌘⇧O</kbd>
+      </button>
+
+      <label class="side-search" for="historySearch">
+        <svg class="ic"><use href="#i-search"/></svg>
+        <input id="historySearch" type="search" placeholder="Search chats" autocomplete="off" />
+      </label>
+
+      <nav class="history" id="history" aria-label="Conversations"></nav>
+    </aside>
+
+    <div class="scrim" id="scrim" aria-hidden="true"></div>
+
+    <!-- ───────────────────────── main ───────────────────────── -->
+    <main class="main">
+      <header class="topbar">
+        <span class="topbar__title" id="chatTitle" aria-live="polite"></span>
+      </header>
+
+      <section class="stage is-empty" id="stage">
+        <div class="scroll" id="scroll">
+          <!-- empty state -->
+          <div class="hero" id="hero">
+            <h1 class="hero__title">Hi, I'm <span class="accent">Cortex</span>.</h1>
+            <p class="hero__sub" id="heroSub"></p>
+          </div>
+
+          <!-- conversation -->
+          <div class="thread" id="thread" role="log" aria-live="polite"></div>
+        </div>
+
+        <div class="dock">
+          <form class="composer" id="composer" autocomplete="off">
+            <div class="composer__inner">
+              <label class="sr-only" for="prompt">Message Cortex</label>
+              <textarea id="prompt" rows="1" placeholder="Message Cortex…" spellcheck="true" enterkeyhint="send"></textarea>
+              <div class="composer__files" id="composerFiles" aria-live="polite"></div>
+              <div class="composer__bar">
+                <div class="composer__tools">
+                  <input type="file" id="fileInput" hidden />
+                  <button class="tool-btn tool-btn--attach" id="attachBtn" type="button" aria-label="Attach a file" title="Attach a file">
+                    <svg class="ic"><use href="#i-clip"/></svg>
+                  </button>
+                </div>
+                <div class="composer__send">
+                  <span class="composer__hint" id="composerHint">Enter to send</span>
+                  <button class="send" id="sendBtn" type="submit" aria-label="Send message" disabled>
+                    <svg class="ic send__arrow"><use href="#i-arrow-up"/></svg>
+                    <svg class="ic send__stop" hidden><use href="#i-stop"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- command palette -->
+  <div class="palette" id="palette" hidden>
+    <div class="palette__card" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="palette__input">
+        <svg class="ic"><use href="#i-search"/></svg>
+        <input id="paletteInput" type="text" placeholder="Type a command…" autocomplete="off" spellcheck="false" />
+        <kbd>esc</kbd>
+      </div>
+      <div class="palette__list" id="paletteList" role="listbox"></div>
+      <div class="palette__foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+        <span><kbd>↵</kbd> select</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <noscript>
+    <div class="noscript">Cortex needs JavaScript for the chat demo. Enable it and refresh.</div>
+  </noscript>
+
+  <script src="js/chat.js?v=5" defer></script>
+  <script src="js/app.js?v=5" defer></script>
+</body>
+</html>
